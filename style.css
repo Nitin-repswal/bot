@@ -1,0 +1,90 @@
+/* Gradient background */
+body {
+    background: linear-gradient(45deg, #6a11cb, #ff6f91, #ffcc00);
+    background-size: 300% 300%;
+    animation: gradientBG 10s infinite alternate;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+@keyframes gradientBG {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Highlight effect */
+.highlight {
+    color: #ffeb3b;
+    text-shadow: 0px 0px 10px rgba(255, 235, 59, 0.8);
+}
+
+/* Button */
+button {
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 1);
+}
+
+/* Hidden text */
+.hidden {
+    display: none;
+}
+
+/* Glowing Flirt Line */
+#compliment {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: glowEffect 1.5s infinite alternate;
+}
+@keyframes glowEffect {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+    to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+/* Twinkling Stars */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: twinkle 2s infinite alternate;
+}
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
